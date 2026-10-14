@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
+:root {
+    --agro-green: #13845f;
+    --agro-green-dark: #0e6d4e;
+    --agro-light: #f7fffb;
+    --agro-border: #d9e0e5;
+    --agro-text: #1d2630;
+    --agro-muted: #7b8794;
+    --agro-blue: #1683d8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f5eaef;
+    font-family: "Comic Neue", cursive;
+    color: var(--agro-text);
+}
+
+.register-page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 50px 20px;
+}
+
+.register-container {
+    width: 90%;
+    max-width: 500px;
+    background: #a3f7b5;
+    border: 6px solid #13845f;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    
+}
+
+/* Logo */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.logo-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 20px;
+    background: #7af0b7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: green;
+    font-size: 18px;
+}
+
+.logo-text h2 {
+    margin: 4px;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--agro-green-dark);
+    letter-spacing: 1px;
+}
+
+.logo-text span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 6px;
+    color: var(--agro-green-dark);
+    margin-top: -2px;
+}
+
+/* Close button */
+
+.close-btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    border: solid black;
+    border-radius: 55px;
+    background: none;
+    font-size: 15px;
+    color: #777;
+    cursor: pointer;
+}
+
+/* Heading */
+
+.page-title {
+    font-size: 28px;
+    font-weight: 500;
+    margin: 25px 0 5px;
+}
+
+.login-text {
+    font-size: 16px;
+    color: var(--agro-muted);
+    margin-bottom: 25px;
+}
+
+.login-text a {
+    text-decoration: none;
+    color: var(--agro-blue);
+    font-weight: 500;
+}
+
+/* Inputs */
+
+.form-group {
+    margin-bottom: 15PX;
+}
+
+.input-box {
+    position: relative;
+    height: 60PX;
+}
+
+.input-box i.main-icon {
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #708091;
+    font-size: 21px;
+    z-index: 2;
+}
+
+.form-control-custom {
+    width: 100%;
+    height: 50px;
+    border: 1.5px solid var(--agro-border);
+    border-radius: 12px;
+    padding: 0 60px;
+    font-size: 22px;
+    font-family: inherit;
+    color: var(--agro-text);
+    outline: none;
+    transition: 0.2s;
+}
+
+.form-control-custom:focus {
+    border-color: var(--agro-green);
+    box-shadow: 0 0 0 3px rgba(19, 132, 95, 0.08);
+}
+
+.form-control-custom::placeholder {
+    color: #a1a8b0;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 20px;
+    top: 40%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    font-size: 22px;
+    color: #20252b;
+    cursor: pointer;
+}
+
+/* Register as */
+
+.section-title {
+    font-size: 25px;
+    font-weight: 700;
+    margin: 28px 0 15px;
+}
+
+.role-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5px;
+   
+}
+
+.role-option {
+    position: relative;
+    height: 60PX;
+    margin:15px ;
+    
+}
+
+.role-option input {
+    position: absolute;
+    opacity: 0;
+}
+
+.role-label {
+    height: 20px;
+    border: 2px solid var(--agro-border);
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    background: #ffffff;
+}
+
+.role-label i.role-icon {
+    font-size: 20px;
+    color: green;
+}
+
+.role-name {
+    font-size: 20px;
+    font-weight: 500;
+    flex: 1;
+}
+
+.role-check {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #aeb7c0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.role-option input:checked + .role-label {
+    border-color: var(--agro-green);
+    background: #f2fbf6;
+}
+
+.role-option input:checked + .role-label i.role-icon {
+    color: var(--agro-green);
+}
+
+.role-option input:checked + .role-label .role-check {
+    background: var(--agro-green);
+    border-color: var(--agro-green);
+}
+
+/* Profile */
+
+.profile-section {
+    margin-top: 15px;
+}
+
+.profile-upload {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-preview {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    border: 2px solid #d9e0e5;
+    object-fit: cover;
+    background: #edf2f6;
+}
+
+.upload-area {
+    flex: 1;
+}
+
+.file-label {
+    height: 35px;
+    border: 1.5px solid var(--agro-border);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    color: var(--agro-blue);
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.file-label i {
+    margin-right: 10px;
+}
+
+#profile_picture {
+    display: none;
+}
+
+
+
+/* Register button */
+
+.register-btn {
+    width: 100%;
+    height: 40px;
+    margin-top: 19px;
+    border: none;
+    border-radius: 12px;
+    background: var(--agro-green);
+    color: white;
+    font-family: inherit;
+    font-size: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.register-btn:hover {
+    background: var(--agro-green-dark);
+}
+
+/* Policy */
+
+.policy {
+    text-align: center;
+    margin-top: 25px;
+    color: #7b8794;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.policy a {
+    color: var(--agro-blue);
+    text-decoration: none;
+}
+
+/* Validation */
+
+.error-message {
+    color: #dc3545;
+    margin-top: 7px;
+    font-size: 15px;
+}
+
+.alert {
+    font-size: 18px;
+}
+
+/* Responsive */
+
+@media (max-width: 400px) {
+
+    .register-page {
+        padding: 15px 10px 25px;
+    }
+
+    .page-title {
+        font-size: 20px;
+    }
+
+    .login-text {
+        font-size: 15px;
+    }
+
+    .form-control-custom {
+        height: 48px;
+        font-size: 15px;
+    }
+
+    .role-container {
+        grid-template-columns: 1fr;
+    }
+
+    .role-label {
+        height: 60px;
+    }
+
+    .profile-upload {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .profile-preview {
+        align-self: center;
+    }
+
+    .close-btn {
+        right: 12px;
+        top: 12px;
+    }
+
+    .logo-text h2 {
+        font-size: 16px;
+    }
+}

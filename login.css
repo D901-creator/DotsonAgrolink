@@ -1,0 +1,600 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --agro-green: #149765;
+    --agro-green-dark: #0d7650;
+    --agro-blue: #1683d8;
+    --agro-gray: #738294;
+    --agro-border: #d8e0e7;
+    --agro-light: #f7fbf9;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background: #f5e9e9;
+
+    font-family: "Comic Neue", cursive;
+
+    color: #17212b;
+
+    overflow-x: hidden;
+}
+
+
+/* ===================================
+   LOGIN PAGE
+=================================== */
+
+.login-page {
+ 
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    padding: 25px 15px 25px;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+.login-card {
+    
+border:6px green solid;
+    padding: 3px 10px;
+    width: 90%;
+    max-width: 500px;
+    background: #a3f7b5;
+    
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    
+}
+
+
+/* ===================================
+   CLOSE BUTTON
+=================================== */
+
+.close-btn {
+    position: absolute;
+
+    top: 22px;
+    right: 22px;
+
+    width: 25px;
+    height: 25px;
+
+    border: solid  green;
+border-radius: 20px;
+    background: transparent;
+
+    color: #697783;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    z-index: 500;
+
+    transition: 0.2s ease;
+}
+
+.close-btn:hover {
+    color: var(--agro-green);
+    transform: scale(1.08);
+}
+
+
+/* ===================================
+   BRAND
+=================================== */
+
+.brand-area {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 5px;
+}
+
+
+.brand-icon {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    background: #76f5b5;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: var(--agro-green);
+
+    font-size: 26px;
+}
+
+
+.brand-text h1 {
+    padding: 0;
+    margin: 0;
+
+    font-size: 17px;
+
+    font-weight: 400;
+
+    color: #0f6e50;
+
+    letter-spacing: 1px;
+}
+
+
+.brand-text span {
+    display: block;
+
+    margin-top: -2px;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #18775a;
+}
+
+
+/* ===================================
+   TAGLINE
+=================================== */
+
+.tagline {
+    margin-left: 68px;
+
+    color: rgb(29, 112, 29);
+
+    font-size: 15px;
+
+    margin-bottom: 32px;
+}
+
+
+/* ===================================
+   HEADING
+=================================== */
+
+.login-title {
+    margin: 0 0 5px;
+
+    font-size: 20px;
+
+    line-height: 1.1;
+
+    font-weight: 500;
+}
+
+
+.new-user {
+    font-size: 16px;
+
+    color: #778592;
+
+    margin-bottom: 22px;
+}
+
+
+.new-user a {
+    color: var(--agro-blue);
+
+    text-decoration: none;
+
+    font-weight: 500;
+}
+
+
+.new-user a:hover {
+    text-decoration: underline;
+}
+
+
+/* ===================================
+   ALERT
+=================================== */
+
+.login-alert {
+    border-radius: 12px;
+
+    font-size: 15px;
+
+    margin-bottom: 17px;
+}
+
+
+/* ===================================
+   GOOGLE BUTTON
+=================================== */
+
+.google-btn {
+    width: 95%;
+
+    height: 50px;
+
+    border: 1.5px solid var(--agro-border);
+
+    background: white;
+
+    border-radius: 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 17px;
+
+    font-family: inherit;
+
+    font-size: 17px;
+
+    color: #1f2933;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.google-btn:hover {
+    background: #fafafa;
+
+    border-color: #c7d0d8;
+}
+
+
+.google-icon {
+    font-family: Arial, sans-serif;
+
+    font-weight: 700;
+
+    font-size: 29px;
+
+    color: #4285f4;
+}
+
+
+/* ===================================
+   OR DIVIDER
+=================================== */
+
+.or-divider {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin: 18px 0 26px;
+}
+
+
+.or-divider span {
+    flex: 1;
+
+    height: 1px;
+
+    background: green;
+}
+
+
+.or-divider b {
+    color:rgb(2, 85, 2);
+
+    font-size: 17px;
+
+    font-weight: 250;
+}
+
+
+/* ===================================
+   LABEL
+=================================== */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+.input-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 16px;
+
+    color: #19232d;
+
+    font-weight: 600;
+}
+
+
+/* ===================================
+   INPUT
+=================================== */
+
+.input-wrapper {
+    position: relative;
+}
+
+
+.input-icon {
+    position: absolute;
+
+    left: 17px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #657687;
+
+    font-size: 18px;
+
+    z-index: 2;
+}
+
+
+.login-input {
+    width: 95%;
+
+    height: 52px;
+
+    padding: 0 45px;
+
+    border: 1.5px solid var(--agro-border);
+
+    border-radius: 13px;
+
+    background: white;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    color: #17212b;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+
+.login-input::placeholder {
+    color: #96a2ae;
+}
+
+
+.login-input:focus {
+    border-color: var(--agro-green);
+
+    box-shadow: 0 0 0 3px rgba(20, 151, 101, 0.08);
+}
+
+
+/* ===================================
+   PASSWORD TOGGLE
+=================================== */
+
+.password-toggle {
+    position:absolute ;
+
+    right: 38px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background: transparent;
+
+    border: none;
+
+    color: #202a33;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+
+/* ===================================
+   FORGOT PASSWORD
+=================================== */
+
+.forgot-area {
+    margin-top: -5px;
+
+    margin-bottom: 17px;
+}
+
+
+.forgot-area a {
+    color: var(--agro-blue);
+
+    font-size: 15px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+
+.forgot-area a:hover {
+    text-decoration: underline;
+}
+
+
+/* ===================================
+   LOGIN BUTTON
+=================================== */
+
+.login-btn {
+    width: 25%;
+
+    height: 52px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background: var(--agro-green);
+
+    color: white;
+    align-items: center;
+    justify-content: center;
+
+    font-family: inherit;
+margin-right: 50%;
+    font-size: 13px;
+
+    font-weight: 400;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.login-btn:hover {
+    background: var(--agro-green-dark);
+
+    transform: translateY(-1px);
+}
+
+
+/* ===================================
+   POLICY
+=================================== */
+
+.policy-text {
+    text-align: center;
+
+    margin-top: 28px;
+
+    font-size: 14px;
+
+    line-height: 1.2;
+
+    color: #778592;
+}
+
+
+.policy-text a {
+    color: var(--agro-blue);
+
+    text-decoration: none;
+
+    font-weight: 700;
+}
+
+
+
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media (max-width: 768px) {
+
+    .login-page {
+        padding: 25px 15px 25px;
+    }
+
+    .login-card {
+        padding: 0;
+    }
+
+    .brand-area {
+        gap: 10px;
+    }
+
+    .brand-icon {
+        width: 58px;
+        height: 58px;
+        font-size: 28px;
+    }
+
+    .brand-text h1 {
+        font-size: 25px;
+    }
+
+    .brand-text span {
+        font-size: 12px;
+        letter-spacing: 5px;
+    }
+
+    .tagline {
+        margin-left: 0;
+
+        font-size: 17px;
+
+        margin-top: 10px;
+
+        margin-bottom: 28px;
+    }
+
+    .login-title {
+        font-size: 38px;
+    }
+
+    .new-user {
+        font-size: 19px;
+    }
+
+    .google-btn {
+        height: 60px;
+
+        font-size: 18px;
+    }
+
+    .login-input {
+        height: 60px;
+
+        font-size: 18px;
+
+        padding-left: 55px;
+    }
+
+    .input-label {
+        font-size: 19px;
+    }
+
+    .login-btn {
+        height: 62px;
+
+        font-size: 22px;
+    }
+
+    .close-btn {
+        top: 10px;
+
+        right: 10px;
+
+        font-size: 27px;
+    }
+
+    .farm-background {
+        height: 150px;
+    }
+}
